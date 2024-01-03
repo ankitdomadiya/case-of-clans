@@ -1,0 +1,35 @@
+@mixin flex-box($content,$align) {
+  display: flex;
+  justify-content: $content;
+  align-items: $align;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  background-color: gray;
+  height: 50px;
+  position: relative;
+  @include flex-box(center, center);
+
+  button {
+    background-color: transparent;
+    border: 0;
+    height: 100%;
+    padding: 0 20px;
+    color: #FFF;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:is(:hover,:focus) {
+      background-color: rgba(82, 82, 82, 0.767);
+    }
+  }
+
+  .active-btn {
+    background-color: rgba(82, 82, 82, 0.767);
+  }
+}

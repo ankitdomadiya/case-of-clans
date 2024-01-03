@@ -1,0 +1,6 @@
+<nav class="navbar">
+  <ng-container *ngFor="let item of routerLinks">
+    <button routerLink="{{item.link}}" routerLinkActive="active-btn">{{item.link}}</button>
+  </ng-container>
+</nav>
+<router-outlet></router-outlet>

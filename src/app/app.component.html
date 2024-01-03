@@ -1,0 +1,7 @@
+<nav class="navbar">
+  <ng-container *ngFor="let item of routerLinks">
+    <button class="nav-links" routerLink="{{item.link}}" routerLinkActive="active-btn">{{item.link}}</button>
+  </ng-container>
+  <!-- <button routerLink="troops-elixir/rootrider" routerLinkActive="active-btn">rootrider</button> -->
+</nav>
+<router-outlet></router-outlet>
